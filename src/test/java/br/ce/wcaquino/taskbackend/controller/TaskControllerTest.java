@@ -39,7 +39,6 @@ public class TaskControllerTest {
 			//Assert.assertEquals(expected, actual);
 			Assert.assertEquals("Fill the task description", e.getMessage());
 		}
-		
 	}
 
 	@Test
@@ -73,7 +72,7 @@ public class TaskControllerTest {
 	}
 	
 	@Test
-	public void naoDeveSalvarTarefaComSucesso() throws ValidationException {
+	public void deveSalvarTarefaComSucesso() throws ValidationException {
 		Task todo = new Task();
 		todo.setTask("Descricao");
 		todo.setDueDate(LocalDate.now());
