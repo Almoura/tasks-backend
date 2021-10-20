@@ -12,7 +12,7 @@ public class DateUtilsTest {
 		// INIBIDA TEMPORARIAMENTE
 		//Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));
 		Assert.assertFalse(DateUtils.isEqualOrFutureDate(date));
-		//System.out.println(DateUtils.isEqualOrFutureDate(date));
+		System.out.println(DateUtils.isEqualOrFutureDate(date));
 	}
 	
 	@Test
