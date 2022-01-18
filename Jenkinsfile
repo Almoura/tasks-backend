@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Build Backend') {
             steps {              
-                sh 'mvn -v'
+                sh 'dir'
             }
         }
     }  
