@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Build Backend') {
             steps {              
-                echo bat 'mvn -v'
+                powershell label: '', script: 'mvn -v'
             }
         }
     }  
