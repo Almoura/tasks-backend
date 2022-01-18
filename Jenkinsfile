@@ -1,6 +1,6 @@
-pipeline {    
+pipeline { 
+    bat_string = "dir"   
     agent any
-    bat_string = "dir"
     stages {
         stage ('Build Backend') {
             steps {              
