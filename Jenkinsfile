@@ -1,4 +1,4 @@
-bat_string = "dir"   
+bat_string = 'dir'   
 pipeline { 
     agent any
     stages {
