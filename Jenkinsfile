@@ -1,9 +1,10 @@
-pipeline {
+pipeline {    
     agent any
     stages {
         stage ('Build Backend') {
             steps {
-                bat 'mvn -v'
+                bat_string = "dir"
+                bat bat_string
             }
         }
     }  
