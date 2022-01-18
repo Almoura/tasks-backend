@@ -1,5 +1,5 @@
+bat_string = "dir"   
 pipeline { 
-    bat_string = "dir"   
     agent any
     stages {
         stage ('Build Backend') {
