@@ -6,5 +6,10 @@ pipeline {
                 powershell label: '', script: 'mvn clean package -DskipTests=true'
             }
         }
+        stage ('Unit Tests') {
+            steps {              
+                powershell label: '', script: 'mvn test'
+            }
+        }
     }  
 }
