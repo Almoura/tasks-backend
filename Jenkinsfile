@@ -17,7 +17,7 @@ pipeline {
             }
             steps {  
                 withSonarQubeEnv('SONAR_LOCAL') {
-                    powershell label: '', script: '${scannerHome}\bin\sonar-scanner -e -Dsonar.projectKey=DeployBackAndre -Dsonar.host.url=http://10.18.2.159:9000 -Dsonar.login=2ab5b28b9b6a242755dccd8d2b37178662d8c063 -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=**/.mvn/**,**/src/test/**,**/model/**,**Application.java'
+                    powershell label: '', script: "${scannerHome}\bin\sonar-scanner -e -Dsonar.projectKey=DeployBackAndre -Dsonar.host.url=http://10.18.2.159:9000 -Dsonar.login=2ab5b28b9b6a242755dccd8d2b37178662d8c063 -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=**/.mvn/**,**/src/test/**,**/model/**,**Application.java"
                 }
             }
         }
