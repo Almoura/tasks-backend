@@ -11,9 +11,6 @@ pipeline {
                 powershell label: '', script: 'mvn test'
             }
         }
-        // ATENÇÃO IMPORTANTE
-        // Estágios desabilitados por conta de problema relacionado ao nome "C:\users\André Moura". Em ambiente de produção, será
-        // definido outro nome, sem acentuação gráfica em sem espaço separador.
         // stage ('Sonar Analysis') {
         //     environment {
         //         scannerHome = tool 'SONAR_SCANNER'
@@ -32,17 +29,11 @@ pipeline {
         //         }
         //     }
         // }
-        // stage ('Deploy Backend') {
-        //     steps {
-        //         deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001/')], contextPath: 'tasks-backend', war: 'target/tasks-backend.war'
-        //     }
-        // }
-        // stage ('API Test') {
-        //     steps {
-        //         git credentialsId: 'github_login', url: 'https://github.com/Almoura/tasks-api-test'
-        //         powershell label: '', script: 'mvn test'
-        //     }
-        // }
+        stage ('Deploy Backend') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001/')], contextPath: 'tasks-backend', war: 'target/tasks-backend.war'
+            }
+        }
     }  
 }
 
