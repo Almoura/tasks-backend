@@ -35,8 +35,10 @@ pipeline {
             }
         }
         stage ('API Test') {
-            git credentialsId: 'github_login', url: 'https://github.com/Almoura/tasks-api-test'         
-            powershell label: '', script: 'mvn test'
+            steps {
+                git credentialsId: 'github_login', url: 'https://github.com/Almoura/tasks-api-test'         
+                powershell label: '', script: 'mvn test'
+            }
         }    
     }  
 }
