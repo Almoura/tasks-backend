@@ -11,7 +11,7 @@ pipeline {
                 powershell label: '', script: 'mvn test'
             }
         }
-        // ATENÇÃO! IMPORTANTE!
+        // ATENÇÃO IMPORTANTE
         // Estágios desabilitados por conta de problema relacionado ao nome "C:\users\André Moura". Em ambiente de produção, será
         // definido outro nome, sem acentuação gráfica em sem espaço separador.
         // stage ('Sonar Analysis') {
