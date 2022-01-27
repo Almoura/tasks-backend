@@ -43,7 +43,6 @@ pipeline {
                 powershell label: '', script: 'mvn test'
             }
         }
-
     }  
 }
 
