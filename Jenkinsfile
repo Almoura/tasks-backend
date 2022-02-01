@@ -59,6 +59,12 @@ pipeline {
                 }
             }
         }
+        stage ('Deploy Prod') {
+            steps {
+                powershell label: '', script: 'docker-compose build'
+                powershell label: '', script: 'docker-compose up -d'
+            }
+        }
     }  
 }
 
