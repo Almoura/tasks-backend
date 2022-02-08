@@ -60,7 +60,7 @@ public class TaskControllerTest {
 	public void naoDeveSalvarTarefaComDataPassada() {
 		Task todo = new Task();
 		todo.setTask("Descricao");
-		todo.setDueDate(LocalDate.of(2010, 01, 01));
+		todo.setDueDate(LocalDate.of(2010, 02, 01));
 		//TaskController controller = new TaskController();
 		try {
 			controller.save(todo);

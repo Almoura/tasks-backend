@@ -65,6 +65,15 @@ pipeline {
                 powershell label: '', script: 'docker-compose up -d'
             }
         }
+        stage ('Health Check') {
+            steps {
+                // Paralizará o fluxo para dar tempo para a aplicação subir antes de executar os testes
+                sleep(5) 
+                dir('functional-test') {
+                    powershell label: '', script: 'mvn verify -Dskip.surefire.tests'
+                }
+            }
+        }        
     }  
 }
 
